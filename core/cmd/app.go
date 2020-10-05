@@ -384,13 +384,13 @@ func NewApp(client *Client) *cli.App {
 				},
 				{
 					Name:   "hard-reset",
-					Usage:  "Removes unstarted transactions and attempts to cancel pending transactions. Use with caution, this command cannot be reverted! Only execute when the node is not started! You must have a funding address ready to use",
+					Usage:  "Removes unstarted transactions, cancels pending transactions as well as deletes job runs. Use with caution, this command cannot be reverted! Only execute when the node is not started!",
 					Action: client.HardReset,
 					Flags:  []cli.Flag{},
 				},
 				{
 					Name:        "db",
-					Usage:       "Commands for managing the database.",
+					Usage:       "Commands for managing the  database.",
 					Description: "Potentially destructive commands for managing the database, only intended for dev/testing purposes.",
 					Hidden:      !client.Config.Dev(),
 					Subcommands: []cli.Command{
