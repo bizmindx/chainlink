@@ -419,7 +419,7 @@ func confirmHardReset() bool {
 	prompt := NewTerminalPrompter()
 	var answer string
 	for {
-		answer = prompt.Prompt("Are you sure? This action is irreversible! (yes/No)")
+		answer = prompt.Prompt("Are you sure? This action is irreversible! (yes/no)")
 		if answer == "yes" {
 			return true
 		} else if answer == "no" {
